@@ -4,7 +4,6 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppPopup from "../components/PopUp/WhatsAppPopup";
-import CartSidebar from "../pages/Products/CartSidebar";
 
 function Layout() {
   return (
@@ -15,7 +14,7 @@ function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <CartSidebar />
+
       <WhatsAppPopup />
     </>
   );

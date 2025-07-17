@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Menu,
@@ -7,9 +7,7 @@ import {
   Phone,
   Mail,
   Clock,
-  BookOpen,
   ShoppingCart,
-  User,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
@@ -17,51 +15,20 @@ import { useCart } from "../context/CartContext";
 
 const navItems = [
   { label: "Home", path: "/" },
-  {
-    label: "About",
-    path: "/about",
-  },
-  {
-    label: "Products",
-    path: "/products",
-    // submenu: [
-    //   { label: "All Products", path: "/products" },
-    //   { label: "Bio-Fungicides", path: "/category/bio-fungicides" },
-    //   { label: "Bio-Fertilizers", path: "/category/bio-fertilizer" },
-    //   { label: "Bio-Pesticides", path: "/category/bio-pesticides" },
-    //   { label: "Organic Inputs", path: "/category/organic-inputs" },
-    // ],
-  },
-  {
-    label: "Blog",
-    path: "/blogs",
-  },
-  {
-    label: "Contact",
-    path: "/contact",
-  },
+  { label: "About", path: "/about" },
+  { label: "Products", path: "/products" },
+  { label: "Facilities", path: "/facilities" },
+  { label: "Training", path: "/training" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
-  const { itemCount, isCartOpen, toggleCart } = useCart();
+  const { itemCount, toggleCart } = useCart();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (index) => {
-    setOpenDropdown(openDropdown === index ? null : index);
-  };
-
-  const handleNavItemClick = (item, index) => {
-    if (item.submenu) {
-      toggleDropdown(index);
-    } else {
-      navigate(item.path);
-      setIsMenuOpen(false);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,22 +41,22 @@ const Navbar = () => {
   return (
     <header className="relative z-50">
       {/* Top Contact Bar */}
-      <div className="bg-[#1A317F] text-white text-sm px-4 fixed top-0 left-0 w-full z-[100]">
+      <div className="bg-rose-800 text-white text-sm px-4 fixed top-0 left-0 w-full z-[100]">
         <div className="container mx-auto flex justify-between items-center py-2">
           <div className="flex items-center space-x-4">
             <a
-              href="mailto:info@philippine.in"
-              className="hover:text-[#C4CBD3] text-xs md:text-sm transition-colors flex items-center"
+              href="mailto:info@stitchingwaves.com"
+              className="hover:text-pink-200 text-xs md:text-sm transition-colors flex items-center"
             >
               <Mail size={14} className="mr-1" />
-              info@philippine.in
+              info@stitchingwaves.com
             </a>
             <a
-              href="tel:+917038970271"
-              className="hover:text-[#C4CBD3] text-xs md:text-sm transition-colors flex items-center"
+              href="tel:+918788493783"
+              className="hover:text-pink-200 text-xs md:text-sm transition-colors flex items-center"
             >
               <Phone size={14} className="mr-1" />
-              +91 70389 70271
+              +91 8788493783
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-2">
@@ -115,48 +82,17 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex space-x-1 font-medium text-gray-800 relative">
               {navItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative"
-                  onMouseEnter={() => item.submenu && setOpenDropdown(index)}
-                  onMouseLeave={() => item.submenu && setOpenDropdown(null)}
-                >
+                <div key={index} className="relative">
                   <button
-                    onClick={() => handleNavItemClick(item, index)}
+                    onClick={() => navigate(item.path)}
                     className={`px-4 py-2 rounded-lg flex items-center gap-1 transition-all ${
-                      openDropdown === index
-                        ? `text-[#1A317F] bg-[#E8EBF5]`
-                        : "hover:text-[#1A317F] hover:bg-[#E8EBF5]/50"
+                      window.location.pathname === item.path
+                        ? `text-rose-600 bg-pink-50`
+                        : "hover:text-rose-600 hover:bg-pink-50/50"
                     }`}
                   >
                     {item.label}
-                    {item.submenu && (
-                      <ChevronDown
-                        size={16}
-                        className={`transition-transform ${
-                          openDropdown === index ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
                   </button>
-
-                  {/* Dropdown Menu */}
-                  {openDropdown === index && item.submenu && (
-                    <div className="absolute top-12 left-0 bg-white rounded-lg shadow-xl py-2 min-w-[220px] z-[120] border border-gray-100">
-                      {item.submenu.map((subItem, subIndex) => (
-                        <div
-                          key={subIndex}
-                          onClick={() => {
-                            navigate(subItem.path);
-                            setOpenDropdown(null);
-                          }}
-                          className="px-4 py-2 text-sm text-gray-700 cursor-pointer transition-all hover:bg-[#E8EBF5] hover:text-[#1A317F] hover:pl-5"
-                        >
-                          {subItem.label}
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -165,11 +101,11 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               <button
                 onClick={toggleCart}
-                className="relative p-2 text-gray-700 hover:text-[#1A317F] transition-colors"
+                className="relative p-2 text-gray-700 hover:text-rose-600 transition-colors"
               >
-                <ShoppingCart size={20} />
+                {/* <ShoppingCart size={20} /> */}
                 {itemCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-[#48A93B] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-rose-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {itemCount}
                   </span>
                 )}
@@ -177,7 +113,7 @@ const Navbar = () => {
 
               <button
                 onClick={toggleMenu}
-                className="lg:hidden p-2 text-gray-700 hover:text-[#1A317F] transition-colors"
+                className="lg:hidden p-2 text-gray-700 hover:text-rose-600 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -195,7 +131,7 @@ const Navbar = () => {
             </div>
             <button
               onClick={toggleMenu}
-              className="text-gray-800 hover:text-[#1A317F] p-2"
+              className="text-gray-800 hover:text-rose-600 p-2"
             >
               <X size={28} />
             </button>
@@ -205,60 +141,35 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <div key={index} className="border-b border-gray-100 pb-2">
                 <button
-                  onClick={() => handleNavItemClick(item, index)}
-                  className={`w-full text-left font-medium text-gray-800 py-3 flex justify-between items-center ${
-                    item.submenu ? "" : "hover:text-[#1A317F]"
-                  }`}
+                  onClick={() => {
+                    navigate(item.path);
+                    setIsMenuOpen(false);
+                  }}
+                  className={`w-full text-left font-medium text-gray-800 py-3 flex justify-between items-center hover:text-rose-600`}
                 >
                   <div className="flex items-center">{item.label}</div>
-                  {item.submenu && (
-                    <ChevronDown
-                      size={20}
-                      className={`transition-transform ${
-                        openDropdown === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
                 </button>
-                {/* Mobile Submenu */}
-                {item.submenu && openDropdown === index && (
-                  <div className="ml-4 space-y-2 mb-2">
-                    {item.submenu.map((sub, i) => (
-                      <div
-                        key={i}
-                        onClick={() => {
-                          navigate(sub.path);
-                          setIsMenuOpen(false);
-                        }}
-                        className="pl-3 py-2 text-gray-700 hover:text-[#1A317F] cursor-pointer flex items-center"
-                      >
-                        <span className="text-[#48A93B] mr-2">•</span>
-                        {sub.label}
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
           </div>
 
           {/* Mobile Contact Info */}
-          <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+          <div className="mt-8 p-4 bg-pink-50 rounded-lg">
             <h3 className="font-semibold text-gray-900 mb-3">Contact Us</h3>
             <div className="space-y-3">
               <a
-                href="mailto:info@philippine.in"
-                className="text-gray-700 hover:text-[#1A317F] flex items-center"
+                href="mailto:info@stitchingwaves.com"
+                className="text-gray-700 hover:text-rose-600 flex items-center"
               >
                 <Mail size={16} className="mr-2" />
-                info@philippine.in
+                info@stitchingwaves.com
               </a>
               <a
-                href="tel:+917038970271"
-                className="text-gray-700 hover:text-[#1A317F] flex items-center"
+                href="tel:+918788493783"
+                className="text-gray-700 hover:text-rose-600 flex items-center"
               >
                 <Phone size={16} className="mr-2" />
-                +91 70389 70271
+                +91 8788493783
               </a>
               <div className="text-gray-700 flex items-center">
                 <Clock size={16} className="mr-2" />

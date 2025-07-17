@@ -1,28 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../../utils/motion";
-import { Phone, Mail, MapPin, MessageSquare, Clock, Leaf } from "lucide-react";
+import { Phone, Mail, MapPin, MessageSquare, Clock } from "lucide-react";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 const ContactUsPage = () => {
   return (
     <motion.div
       initial="hidden"
-      whileInView="show"
+      whileInView="visible"
       viewport={{ once: true }}
       className="max-w-7xl mt-40 mx-auto px-4 sm:px-6 lg:px-8 py-12"
     >
       {/* Page Header */}
-      <motion.div
-        variants={fadeIn("up", "spring", 0.1, 1)}
-        className="text-center mb-16"
-      >
+      <motion.div variants={fadeIn} className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Contact Philippine Agri Solution
+          Contact Stitching Waves
         </h1>
-        <div className="w-24 h-1 bg-[#48A93B] mx-auto"></div>
+        <div className="w-24 h-1 bg-rose-600 mx-auto"></div>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          Get in touch for expert agricultural solutions, product inquiries, or
-          technical support
+          Get in touch for garment manufacturing inquiries, product details, or
+          partnership opportunities
         </p>
       </motion.div>
 
@@ -30,7 +31,7 @@ const ContactUsPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Left Column - Contact Form */}
         <motion.div
-          variants={fadeIn("right", "spring", 0.2, 1)}
+          variants={fadeIn}
           className="bg-white p-8 rounded-xl shadow-md border border-gray-100"
         >
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -47,7 +48,7 @@ const ContactUsPage = () => {
               <input
                 type="text"
                 id="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#48A93B] focus:border-[#48A93B]"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
                 required
               />
             </div>
@@ -62,7 +63,7 @@ const ContactUsPage = () => {
               <input
                 type="email"
                 id="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#48A93B] focus:border-[#48A93B]"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
                 required
               />
             </div>
@@ -77,7 +78,7 @@ const ContactUsPage = () => {
               <input
                 type="tel"
                 id="phone"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#48A93B] focus:border-[#48A93B]"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
               />
             </div>
 
@@ -90,14 +91,15 @@ const ContactUsPage = () => {
               </label>
               <select
                 id="product"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#48A93B] focus:border-[#48A93B]"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
                 required
               >
                 <option value="">Select a product category</option>
-                <option value="bio-fungicides">Bio-Fungicides</option>
-                <option value="bio-fertilizers">Bio-Fertilizers</option>
-                <option value="bio-pesticides">Bio-Pesticides</option>
-                <option value="organic-inputs">Organic Inputs</option>
+                <option value="shirts">Shirts</option>
+                <option value="kurtas">Kurtas</option>
+                <option value="palazzo">Palazzo</option>
+                <option value="home-textiles">Home Textiles</option>
+                <option value="uniforms">Uniforms</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -112,7 +114,7 @@ const ContactUsPage = () => {
               <textarea
                 id="message"
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#48A93B] focus:border-[#48A93B]"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
                 required
               ></textarea>
             </div>
@@ -121,7 +123,7 @@ const ContactUsPage = () => {
               type="submit"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-[#48A93B] hover:bg-[#3A8C2F] text-white font-medium py-2 px-4 rounded-md transition-colors"
+              className="w-full bg-rose-600 hover:bg-rose-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
             >
               Send Message
             </motion.button>
@@ -129,48 +131,48 @@ const ContactUsPage = () => {
         </motion.div>
 
         {/* Right Column - Contact Info */}
-        <motion.div variants={fadeIn("left", "spring", 0.2, 1)}>
+        <motion.div variants={fadeIn}>
           {/* Contact Details */}
-          <div className="bg-[#f8fafc] p-8 rounded-xl shadow-sm mb-8 border border-gray-200">
+          <div className="bg-gray-50 p-8 rounded-xl shadow-sm mb-8 border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
               Contact Information
             </h2>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-[#48A93B] p-2 rounded-full text-white">
+                <div className="bg-rose-600 p-2 rounded-full text-white">
                   <Phone size={20} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800">Phone</h3>
-                  <p className="text-gray-600">+91 70389 70271</p>
-                  <p className="text-gray-600">+91 98505 33663</p>
+                  <p className="text-gray-600">8788493783</p>
+                  <p className="text-gray-600">878875799</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-[#48A93B] p-2 rounded-full text-white">
+                <div className="bg-rose-600 p-2 rounded-full text-white">
                   <Mail size={20} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800">Email</h3>
-                  <p className="text-gray-600">info@philippine.in</p>
-                  <p className="text-gray-600">sales@philippine.in</p>
+                  <p className="text-gray-600">info@stitchingwaves.com</p>
+                  <p className="text-gray-600">sales@stitchingwaves.com</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-[#48A93B] p-2 rounded-full text-white">
+                <div className="bg-rose-600 p-2 rounded-full text-white">
                   <MessageSquare size={20} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-800">WhatsApp</h3>
-                  <p className="text-gray-600">+91 70389 70271</p>
+                  <p className="text-gray-600">8788493783</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-[#48A93B] p-2 rounded-full text-white">
+                <div className="bg-rose-600 p-2 rounded-full text-white">
                   <Clock size={20} />
                 </div>
                 <div>
@@ -185,21 +187,21 @@ const ContactUsPage = () => {
           {/* Office Address */}
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-[#48A93B] p-2 rounded-full text-white">
+              <div className="bg-rose-600 p-2 rounded-full text-white">
                 <MapPin size={20} />
               </div>
               <h3 className="text-xl font-semibold text-gray-800">
-                Office & Manufacturing Unit
+                Manufacturing Unit
               </h3>
             </div>
             <address className="text-gray-600 not-italic pl-11">
-              Gat No-369, Plot-05, Falake Wasti
+              Gate No. 10/2, Plot No. 1+2+3
               <br />
-              Moi Nighoje Road, Chakan
+              Khadaki Bk, Taluka Chalisgaon
               <br />
-              Tal-Khed, Dist-Pune
+              Jalgaon, Maharashtra - 424101
               <br />
-              Maharashtra, India - 410501
+              India
             </address>
           </div>
         </motion.div>
@@ -207,26 +209,26 @@ const ContactUsPage = () => {
 
       {/* Google Map Section */}
       <motion.section
-        variants={fadeIn("up", "spring", 0.3, 1)}
-        className="mt-16 bg-[#f8fafc] rounded-xl overflow-hidden border border-gray-200"
+        variants={fadeIn}
+        className="mt-16 bg-gray-50 rounded-xl overflow-hidden border border-gray-200"
       >
         <div className="p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
             Our Location
           </h2>
           <p className="text-gray-600 mb-6">
-            Visit our office or manufacturing unit for product demonstrations
+            Visit our manufacturing unit to see our facilities and products
           </p>
         </div>
         <div className="h-96 bg-gray-200">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715061381521!2d72.8243143153774!3d19.04172265800083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8df05e8e5d9%3A0x3e5a6f196c7a7a2a!2sFinancial%20District%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.715061381521!2d75.8243143153774!3d21.04172265800083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd9c3a1e9e8e5d9%3A0x3e5a6f196c7a7a2a!2sJalgaon%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-            title="Philippine Agri Solution Location"
+            title="Stitching Waves Location"
           ></iframe>
         </div>
       </motion.section>

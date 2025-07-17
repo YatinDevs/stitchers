@@ -5,26 +5,27 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+
 import PageNotFound from "./pages/ErrorPages/NotFound";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home/Home";
 import { CartProvider } from "./context/CartContext";
-import ProductPage from "./pages/Home/ProductPage/ProductPage";
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
-import AboutPage from "./pages/About/AboutPage";
-// import BlogPage from "./pages/Home/Blogs/BlogPage";
-// import BlogDetailsPage from "./pages/Home/Blogs/BlogDetailsPage";
-
+import AboutPage from "./pages/AboutUsPage/AboutUsPage";
+import TrainingPage from "./pages/TrainingPage/TrainingPage";
+import ProductsPage from "./pages/ProductsPage/ProductsPage";
+import FacilitiesPage from "./pages/Facilities/FacilitiesPage";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="contact" element={<ContactUsPage />} />
         <Route path="about" element={<AboutPage />} />
-        {/* <Route path="blogs" element={<BlogPage />} /> */}
-        <Route path="products" element={<ProductPage />} />
-        {/* <Route path="/blog/:slug" element={<BlogDetailsPage />} /> */}
+        <Route path="contact" element={<ContactUsPage />} />
+        <Route path="facilities" element={<FacilitiesPage />} />
+        <Route path="products" element={<ProductsPage />} />
+        <Route path="training" element={<TrainingPage />} />
+
         <Route path="*" element={<PageNotFound />} />
       </Route>
     )
