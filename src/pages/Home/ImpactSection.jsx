@@ -11,7 +11,7 @@ const stats = [
 
 const ImpactSection = () => {
   return (
-    <section className="py-20 bg-rose-600 text-white">
+    <section className="py-20 bg-[#436f6e] text-[#e0dbdb]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2
@@ -21,14 +21,14 @@ const ImpactSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            Our <span className="text-pink-100">Impact</span>
+            Our <span className="text-[#d1a375]">Impact</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xl text-pink-100 max-w-3xl mx-auto"
+            className="text-xl text-[#d3a070] max-w-3xl mx-auto"
           >
             Empowered women create circles of prosperity that transform families
             and communities
@@ -48,7 +48,7 @@ const ImpactSection = () => {
               <div className="text-4xl md:text-5xl font-bold mb-2">
                 <CountUp end={stat.number} duration={3} />+
               </div>
-              <div className="text-lg text-pink-100">{stat.label}</div>
+              <div className="text-lg text-[#d3a070]">{stat.label}</div>
             </motion.div>
           ))}
         </div>

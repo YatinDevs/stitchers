@@ -5,7 +5,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen bg-gradient-to-b from-pink-50 to-white overflow-hidden">
+    <section className="relative h-screen bg-gradient-to-b from-[#e0dbdb] to-white overflow-hidden mt-30 md:mt-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
@@ -21,14 +21,14 @@ const HeroSection = () => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
           >
             Empowering Women Through{" "}
-            <span className="text-rose-600">Garment Manufacturing</span>
+            <span className="text-[#436f6e]">Garment Manufacturing</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg"
+            className="text-lg md:text-xl text-[#8d8f8e] mb-8 max-w-lg"
           >
             Stitching Waves creates opportunities for thousands of women through
             skill development and employment in garment production.
@@ -42,14 +42,14 @@ const HeroSection = () => {
           >
             <Link
               to="/about"
-              className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
+              className="bg-[#436f6e] hover:bg-[#3a6261] text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
             >
               Our Story <ArrowRight size={18} />
             </Link>
 
-            <button className="flex items-center gap-2 text-rose-600 hover:text-rose-700 font-medium">
-              <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center">
-                <Play size={16} className="fill-rose-600 text-rose-600" />
+            <button className="flex items-center gap-2 text-[#436f6e] hover:text-[#3a6261] font-medium">
+              <div className="w-10 h-10 rounded-full bg-[#e0dbdb] flex items-center justify-center">
+                <Play size={16} className="fill-[#436f6e] text-[#436f6e]" />
               </div>
               Watch Video
             </button>

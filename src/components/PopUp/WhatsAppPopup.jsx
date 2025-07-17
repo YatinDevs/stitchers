@@ -52,7 +52,7 @@ function WhatsAppPopup() {
                 Our experts will reply to you shortly
               </p>
               <a
-                href="https://wa.me/917038970271?text=Hello%20there!"
+                href="https://wa.me/918788493783?text=Hello%20there!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors w-full"
@@ -63,7 +63,7 @@ function WhatsAppPopup() {
             </div>
             <div className="px-4 pb-2 text-center">
               <a
-                href="tel:+917038970271"
+                href="tel:+918788493783"
                 className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors w-full"
               >
                 <Phone className="mr-2" />

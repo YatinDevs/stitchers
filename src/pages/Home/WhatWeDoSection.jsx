@@ -30,7 +30,7 @@ const programs = [
 
 const WhatWeDoSection = () => {
   return (
-    <section className="py-20 bg-pink-50">
+    <section className="py-20 bg-[#e7e7e7]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2
@@ -40,14 +40,14 @@ const WhatWeDoSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
-            Our <span className="text-rose-600">Programs & Initiatives</span>
+            Our <span className="text-[#436f6e]">Programs & Initiatives</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-lg text-[#8d8f8e] max-w-2xl mx-auto"
           >
             Creating meaningful opportunities for women through various
             initiatives
@@ -67,12 +67,12 @@ const WhatWeDoSection = () => {
               <h3 className="text-xl font-bold text-gray-800 mb-3">
                 {program.title}
               </h3>
-              <p className="text-gray-600 mb-6 flex-grow">
+              <p className="text-[#8d8f8e] mb-6 flex-grow">
                 {program.description}
               </p>
               <Link
                 to={program.link}
-                className="text-rose-600 hover:text-rose-700 font-medium flex items-center gap-1 mt-auto"
+                className="text-[#436f6e] hover:text-[#3a6261] font-medium flex items-center gap-1 mt-auto"
               >
                 Know More <ArrowRight size={16} />
               </Link>

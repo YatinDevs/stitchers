@@ -41,14 +41,14 @@ const ProductsSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
-            Our <span className="text-rose-600">Product Range</span>
+            Our <span className="text-[#436f6e]">Product Range</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-lg text-[#8d8f8e] max-w-2xl mx-auto"
           >
             Quality garments and textiles manufactured with care and precision
           </motion.p>
@@ -76,7 +76,7 @@ const ProductsSection = () => {
                   </h3>
                   <Link
                     to={product.link}
-                    className="text-pink-200 hover:text-white font-medium flex items-center gap-1"
+                    className="text-[#d1a375] hover:text-white font-medium flex items-center gap-1"
                   >
                     View Collection
                     <svg

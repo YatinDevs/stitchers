@@ -17,11 +17,11 @@ const ContactUsPage = () => {
     >
       {/* Page Header */}
       <motion.div variants={fadeIn} className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-4xl font-bold text-[#436f6e] mb-4">
           Contact Stitching Waves
         </h1>
-        <div className="w-24 h-1 bg-rose-600 mx-auto"></div>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        <div className="w-24 h-1 bg-[#d1a375] mx-auto"></div>
+        <p className="text-[#8d8f8e] mt-4 max-w-2xl mx-auto">
           Get in touch for garment manufacturing inquiries, product details, or
           partnership opportunities
         </p>
@@ -32,23 +32,23 @@ const ContactUsPage = () => {
         {/* Left Column - Contact Form */}
         <motion.div
           variants={fadeIn}
-          className="bg-white p-8 rounded-xl shadow-md border border-gray-100"
+          className="bg-[#e7e7e7] p-8 rounded-xl shadow-md border border-[#c5a17f]/30"
         >
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+          <h2 className="text-2xl font-bold text-[#436f6e] mb-6">
             Send Us a Message
           </h2>
           <form className="space-y-4">
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-[#436f6e] mb-1"
               >
                 Full Name *
               </label>
               <input
                 type="text"
                 id="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
+                className="w-full px-4 py-2 border border-[#8d8f8e] rounded-md focus:ring-[#d1a375] focus:border-[#d1a375] bg-white"
                 required
               />
             </div>
@@ -56,14 +56,14 @@ const ContactUsPage = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-[#436f6e] mb-1"
               >
                 Email *
               </label>
               <input
                 type="email"
                 id="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
+                className="w-full px-4 py-2 border border-[#8d8f8e] rounded-md focus:ring-[#d1a375] focus:border-[#d1a375] bg-white"
                 required
               />
             </div>
@@ -71,27 +71,27 @@ const ContactUsPage = () => {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-[#436f6e] mb-1"
               >
                 Phone Number
               </label>
               <input
                 type="tel"
                 id="phone"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
+                className="w-full px-4 py-2 border border-[#8d8f8e] rounded-md focus:ring-[#d1a375] focus:border-[#d1a375] bg-white"
               />
             </div>
 
             <div>
               <label
                 htmlFor="product"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-[#436f6e] mb-1"
               >
                 Product Interest *
               </label>
               <select
                 id="product"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
+                className="w-full px-4 py-2 border border-[#8d8f8e] rounded-md focus:ring-[#d1a375] focus:border-[#d1a375] bg-white"
                 required
               >
                 <option value="">Select a product category</option>
@@ -107,14 +107,14 @@ const ContactUsPage = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-[#436f6e] mb-1"
               >
                 Message *
               </label>
               <textarea
                 id="message"
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-rose-600 focus:border-rose-600"
+                className="w-full px-4 py-2 border border-[#8d8f8e] rounded-md focus:ring-[#d1a375] focus:border-[#d1a375] bg-white"
                 required
               ></textarea>
             </div>
@@ -123,7 +123,7 @@ const ContactUsPage = () => {
               type="submit"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-rose-600 hover:bg-rose-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+              className="w-full bg-[#436f6e] hover:bg-[#3a6261] text-white font-medium py-2 px-4 rounded-md transition-colors"
             >
               Send Message
             </motion.button>
@@ -133,68 +133,70 @@ const ContactUsPage = () => {
         {/* Right Column - Contact Info */}
         <motion.div variants={fadeIn}>
           {/* Contact Details */}
-          <div className="bg-gray-50 p-8 rounded-xl shadow-sm mb-8 border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+          <div className="bg-[#e7e7e7] p-8 rounded-xl shadow-sm mb-8 border border-[#c5a17f]/30">
+            <h2 className="text-2xl font-bold text-[#436f6e] mb-6">
               Contact Information
             </h2>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-rose-600 p-2 rounded-full text-white">
+                <div className="bg-[#436f6e] p-2 rounded-full text-white">
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">Phone</h3>
-                  <p className="text-gray-600">8788493783</p>
-                  <p className="text-gray-600">878875799</p>
+                  <h3 className="font-semibold text-[#436f6e]">Phone</h3>
+                  <p className="text-[#8d8f8e]">8788493783</p>
+                  <p className="text-[#8d8f8e]">878875799</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-rose-600 p-2 rounded-full text-white">
+                <div className="bg-[#436f6e] p-2 rounded-full text-white">
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">Email</h3>
-                  <p className="text-gray-600">info@stitchingwaves.com</p>
-                  <p className="text-gray-600">sales@stitchingwaves.com</p>
+                  <h3 className="font-semibold text-[#436f6e]">Email</h3>
+                  <p className="text-[#8d8f8e]">info@stitchingwaves.com</p>
+                  <p className="text-[#8d8f8e]">sales@stitchingwaves.com</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-rose-600 p-2 rounded-full text-white">
+                <div className="bg-[#436f6e] p-2 rounded-full text-white">
                   <MessageSquare size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">WhatsApp</h3>
-                  <p className="text-gray-600">8788493783</p>
+                  <h3 className="font-semibold text-[#436f6e]">WhatsApp</h3>
+                  <p className="text-[#8d8f8e]">8788493783</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-rose-600 p-2 rounded-full text-white">
+                <div className="bg-[#436f6e] p-2 rounded-full text-white">
                   <Clock size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">Working Hours</h3>
-                  <p className="text-gray-600">Monday - Friday: 9AM to 6PM</p>
-                  <p className="text-gray-600">Saturday: 9AM to 1PM</p>
+                  <h3 className="font-semibold text-[#436f6e]">
+                    Working Hours
+                  </h3>
+                  <p className="text-[#8d8f8e]">Monday - Friday: 9AM to 6PM</p>
+                  <p className="text-[#8d8f8e]">Saturday: 9AM to 1PM</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Office Address */}
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+          <div className="bg-[#e7e7e7] p-6 rounded-xl shadow-sm border border-[#c5a17f]/30">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-rose-600 p-2 rounded-full text-white">
+              <div className="bg-[#436f6e] p-2 rounded-full text-white">
                 <MapPin size={20} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-[#436f6e]">
                 Manufacturing Unit
               </h3>
             </div>
-            <address className="text-gray-600 not-italic pl-11">
+            <address className="text-[#8d8f8e] not-italic pl-11">
               Gate No. 10/2, Plot No. 1+2+3
               <br />
               Khadaki Bk, Taluka Chalisgaon
@@ -210,13 +212,13 @@ const ContactUsPage = () => {
       {/* Google Map Section */}
       <motion.section
         variants={fadeIn}
-        className="mt-16 bg-gray-50 rounded-xl overflow-hidden border border-gray-200"
+        className="mt-16 bg-[#e7e7e7] rounded-xl overflow-hidden border border-[#c5a17f]/30"
       >
         <div className="p-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+          <h2 className="text-2xl font-bold text-[#436f6e] mb-2">
             Our Location
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-[#8d8f8e] mb-6">
             Visit our manufacturing unit to see our facilities and products
           </p>
         </div>

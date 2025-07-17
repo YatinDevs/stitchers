@@ -54,14 +54,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-rose-800 text-white pt-16 pb-8 px-6 md:px-16">
+    <footer className="bg-[#436f6e] text-[#e0dbdb] pt-16 pb-8 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Company Info */}
         <div>
           <div className="mb-6">
             <Logo white />
           </div>
-          <p className="text-pink-100 mb-6">
+          <p className="text-[#d1a375] mb-6">
             Stitching Waves empowers women through garment manufacturing,
             creating opportunities and sustainable livelihoods.
           </p>
@@ -72,7 +72,7 @@ const Footer = () => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 p-2 rounded-full text-white transition-colors"
+                className="bg-white/10 hover:bg-[#d3a070] p-2 rounded-full text-[#e0dbdb] transition-colors"
                 aria-label={label}
               >
                 {icon}
@@ -83,16 +83,16 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-6 text-pink-200">
+          <h3 className="text-lg font-semibold mb-6 text-[#d1a375]">
             Quick Links
           </h3>
           <ul className="space-y-3">
             {quickLinks.map((link, index) => (
               <li key={index} className="flex items-center">
-                <span className="text-pink-300 mr-2">•</span>
+                <span className="text-[#c5a17f] mr-2">•</span>
                 <Link
                   to={link.path}
-                  className="text-pink-100 hover:text-white transition-colors"
+                  className="text-[#e0dbdb] hover:text-white transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -103,14 +103,16 @@ const Footer = () => {
 
         {/* Product Categories */}
         <div>
-          <h3 className="text-lg font-semibold mb-6 text-pink-200">Products</h3>
+          <h3 className="text-lg font-semibold mb-6 text-[#d1a375]">
+            Products
+          </h3>
           <ul className="space-y-3">
             {productCategories.map((category, index) => (
               <li key={index} className="flex items-center">
-                <span className="text-pink-300 mr-2">•</span>
+                <span className="text-[#c5a17f] mr-2">•</span>
                 <Link
                   to={category.path}
-                  className="text-pink-100 hover:text-white transition-colors"
+                  className="text-[#e0dbdb] hover:text-white transition-colors"
                 >
                   {category.label}
                 </Link>
@@ -121,19 +123,19 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h3 className="text-lg font-semibold mb-6 text-pink-200">
+          <h3 className="text-lg font-semibold mb-6 text-[#d1a375]">
             Contact Us
           </h3>
-          <ul className="space-y-4 text-pink-100">
+          <ul className="space-y-4 text-[#e0dbdb]">
             <li className="flex items-start gap-3">
-              <MapPin size={20} className="text-pink-300 mt-1 flex-shrink-0" />
+              <MapPin size={20} className="text-[#c5a17f] mt-1 flex-shrink-0" />
               <span>
                 Gate No. 10/2, Plot No. 1+2+3, Khadaki Bk, Taluka Chalisgaon,
                 Jalgaon, Maharashtra 424101
               </span>
             </li>
             <li className="flex items-center gap-3">
-              <Mail size={20} className="text-pink-300" />
+              <Mail size={20} className="text-[#c5a17f]" />
               <a
                 href="mailto:info@stitchingwaves.com"
                 className="hover:text-white transition-colors"
@@ -142,7 +144,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <Phone size={20} className="text-pink-300" />
+              <Phone size={20} className="text-[#c5a17f]" />
               <a
                 href="tel:+918788493783"
                 className="hover:text-white transition-colors"
@@ -151,7 +153,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <Clock size={20} className="text-pink-300" />
+              <Clock size={20} className="text-[#c5a17f]" />
               <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
             </li>
           </ul>
@@ -159,16 +161,16 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-12 text-center text-sm text-pink-200 border-t border-rose-700 pt-6">
+      <div className="mt-12 text-center text-sm text-[#d1a375] border-t border-[#8d8f8e] pt-6">
         <p>
           © {new Date().getFullYear()}{" "}
           <span className="font-semibold text-white">Stitching Waves</span>. All
           Rights Reserved.{" "}
-          <Link to="/privacy-policy" className="text-pink-300 hover:underline">
+          <Link to="/privacy-policy" className="text-[#c5a17f] hover:underline">
             Privacy Policy
           </Link>{" "}
           |{" "}
-          <Link to="/terms" className="text-pink-300 hover:underline">
+          <Link to="/terms" className="text-[#c5a17f] hover:underline">
             Terms of Service
           </Link>
         </p>
