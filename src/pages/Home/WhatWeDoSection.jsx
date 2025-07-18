@@ -17,15 +17,15 @@ const programs = [
     title: "Self-Employment Support",
     description:
       "Guidance on setting up small businesses & career opportunities",
-    link: "/programs/self-employment",
+    link: "/about",
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
     alt: "Indian woman entrepreneur",
   },
   {
-    title: "SGAA Fashion Brand",
+    title: "Fashion Brand",
     description: "Fashion brand by artisans trained by Stitchers Garments",
-    link: "/brand",
+    link: "/products",
     image:
       "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
     alt: "Indian traditional garments",
@@ -33,7 +33,7 @@ const programs = [
   {
     title: "CSR Program",
     description: "CSR initiatives to empower women and support our artisans",
-    link: "/csr",
+    link: "/about",
     image:
       "https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1702&q=80",
     alt: "Women empowerment in India",
