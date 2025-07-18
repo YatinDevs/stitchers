@@ -1,31 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { productKurti, productShirt, productTextile } from "../../assets";
 
 const products = [
   {
     name: "Shirts",
-    image:
-      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80",
-    link: "/products/shirts",
+    image: productShirt,
+    link: "/products",
   },
   {
     name: "Kurtas",
-    image:
-      "https://images.unsplash.com/photo-1595341595379-cf0f2a5d643a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-    link: "/products/kurtas",
+    image: productKurti,
+    link: "/products",
   },
   {
     name: "Palazzo",
     image:
       "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-    link: "/products/palazzo",
+    link: "/products",
   },
   {
     name: "Home Textiles",
-    image:
-      "https://images.unsplash.com/photo-1600369672771-985b9b3418a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80",
-    link: "/products/home-textiles",
+    image: productTextile,
+    link: "/products",
   },
 ];
 
@@ -39,7 +37,7 @@ const ProductsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-[#d1a375] mb-4"
           >
             Our <span className="text-[#436f6e]">Product Range</span>
           </motion.h2>
@@ -67,7 +65,7 @@ const ProductsSection = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-100  object-contain transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                 <div>

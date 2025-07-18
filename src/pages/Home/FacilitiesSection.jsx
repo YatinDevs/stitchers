@@ -42,7 +42,8 @@ const FacilitiesSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-[#436f6e] mb-4"
           >
-            Our <span className="text-[#c5a17f]">Advanced Facilities</span>
+            Stitchers Garments{" "}
+            <span className="text-[#c5a17f]">Facilities</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +53,7 @@ const FacilitiesSection = () => {
             className="text-lg text-[#8d8f8e] max-w-2xl mx-auto"
           >
             We combine traditional craftsmanship with modern technology to
-            deliver quality products
+            deliver quality garments and home furnishings
           </motion.p>
         </div>
 

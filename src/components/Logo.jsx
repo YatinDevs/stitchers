@@ -18,7 +18,7 @@ const Logo = () => {
         <img
           src={logo}
           alt="Stitchers"
-          className="w-52 h-18 md:w-52  md:h-20"
+          className="w-52 h-24 md:w-72  md:h-32"
         />
       </motion.div>
     </motion.div>

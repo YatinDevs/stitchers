@@ -137,10 +137,11 @@ const Footer = () => {
             <li className="flex items-center gap-3">
               <Mail size={20} className="text-[#c5a17f]" />
               <a
-                href="mailto:info@stitchingwaves.com"
-                className="hover:text-white transition-colors"
+                href="mailto:info@stitchersgarmentsandhomefurnishing.com"
+                className="hover:text-white transition-colors text-wrap"
               >
-                info@stitchingwaves.com
+                info@stitchersgarmentsand <br />
+                homefurnishing.com
               </a>
             </li>
             <li className="flex items-center gap-3">
@@ -164,8 +165,10 @@ const Footer = () => {
       <div className="mt-12 text-center text-sm text-[#d1a375] border-t border-[#8d8f8e] pt-6">
         <p>
           © {new Date().getFullYear()}{" "}
-          <span className="font-semibold text-white">Stitching Waves</span>. All
-          Rights Reserved.{" "}
+          <span className="font-semibold text-white">
+            Stitchers Garments Manufacturing and Home Furnishing Association
+          </span>
+          . All Rights Reserved.{" "}
           <Link to="/privacy-policy" className="text-[#c5a17f] hover:underline">
             Privacy Policy
           </Link>{" "}

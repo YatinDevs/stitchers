@@ -13,12 +13,16 @@ const ContactUsPage = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="max-w-7xl mt-40 mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      className="max-w-7xl mt-50 mx-auto px-4 sm:px-6 lg:px-8 py-12"
     >
       {/* Page Header */}
       <motion.div variants={fadeIn} className="text-center mb-16">
         <h1 className="text-4xl font-bold text-[#436f6e] mb-4">
-          Contact Stitching Waves
+          Contact{" "}
+          <span className="text-[#d1a375]">
+            Stitchers Garments Manufacturing
+          </span>{" "}
+          and Home Furnishing Association
         </h1>
         <div className="w-24 h-1 bg-[#d1a375] mx-auto"></div>
         <p className="text-[#8d8f8e] mt-4 max-w-2xl mx-auto">
@@ -156,8 +160,15 @@ const ContactUsPage = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#436f6e]">Email</h3>
-                  <p className="text-[#8d8f8e]">info@stitchingwaves.com</p>
-                  <p className="text-[#8d8f8e]">sales@stitchingwaves.com</p>
+                  <p className="text-[#8d8f8e]">
+                    info@stitchersgarmentsand
+                    <br />
+                    homefurnishing.com
+                  </p>
+                  <p className="text-[#8d8f8e]">
+                    sales@stitchersgarmentsand <br />
+                    homefurnishing.com
+                  </p>
                 </div>
               </div>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { abouthome2, first, second } from "../../assets";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -18,7 +19,7 @@ const staggerContainer = {
 
 function AboutPage() {
   return (
-    <div className="bg-[#e7e7e7] mt-32">
+    <div className="bg-[#e7e7e7] mt-50">
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
         {/* Hero Section */}
         <motion.div
@@ -28,7 +29,7 @@ function AboutPage() {
           className="text-center mb-20"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-[#436f6e]">
-            Stitching Waves:{" "}
+            Stitchers{" "}
             <span className="text-[#d1a375]">
               Empowering Through Employment
             </span>
@@ -53,7 +54,7 @@ function AboutPage() {
             className="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.01] transition-all duration-300"
           >
             <img
-              src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              src={first}
               alt="Stitching Waves factory"
               className="w-full h-full object-cover"
               style={{ height: "400px" }}
@@ -64,7 +65,7 @@ function AboutPage() {
             className="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.01] transition-all duration-300"
           >
             <img
-              src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+              src={abouthome2}
               alt="Stitching Waves products"
               className="w-full h-full object-cover"
               style={{ height: "400px" }}
@@ -174,7 +175,7 @@ function AboutPage() {
           <motion.div variants={fadeIn} className="mb-12">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 text-[#436f6e]">
-                About Stitching Waves
+                About <span className="text-[#d1a375]">Stitchers</span>
               </h2>
               <div className="flex justify-center">
                 <div className="w-16 h-1 rounded-full bg-[#d1a375]"></div>
@@ -183,7 +184,8 @@ function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <p className="text-[#8d8f8e] mb-6 leading-relaxed">
-                  Stitching Waves is a newly established garment manufacturing
+                  Stitchers Garments Manufacturing and Home Furnishing
+                  Association is a newly established garment manufacturing
                   company founded in 2025, based in Chalisgaon, Jalgaon
                   District. Spread over 20,000 sq. ft., we have a
                   state-of-the-art manufacturing facility with around 300

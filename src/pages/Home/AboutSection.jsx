@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import { abouthome1, abouthome2, abouthome3, swati } from "../../assets";
 
 const AboutSection = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -14,25 +15,10 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="py-12 md:py-40 md:pb-80 bg-[#e7e7e7] relative">
+    <section className="pt-20 py-12 md:py-40 md:pb-80 bg-[#e7e7e7] relative">
       <div className="relative container mx-auto px-4 md:px-6">
-        {/* Mobile Top Image (hidden on desktop) */}
-        <motion.div
-          className="block lg:hidden w-full h-64 rounded-2xl overflow-hidden shadow-xl mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-            alt="Stitching Waves factory"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-
         <div className="relative flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-12">
-          {/* Desktop Image (hidden on mobile) */}
+          {/* Desktop Image */}
           <motion.div
             className="hidden lg:block w-full lg:w-1/2"
             initial={{ opacity: 0, x: -50 }}
@@ -42,8 +28,8 @@ const AboutSection = () => {
           >
             <div className="z-10 w-full h-80 md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-                alt="Stitching Waves factory"
+                src={abouthome2}
+                alt="Stitchers Garments factory"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -58,7 +44,8 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#436f6e] mb-4">
-              Empowerment Through Employment
+              About <span className="text-[#c5a17f]"> Stitchers Garments </span>
+              Association
             </h2>
             <p className="text-[#8d8f8e] mb-4 sm:mb-6 text-sm sm:text-base">
               We are an association of artisans; by the artisans and for the
@@ -67,10 +54,11 @@ const AboutSection = () => {
               their families.
             </p>
             <p className="text-[#8d8f8e] mb-6 sm:mb-8 text-sm sm:text-base">
-              We train young girls and women on modern machines - from cutting
-              to stitching to finishing to packing, even managing our showrooms.
-              We are proud that from a small group of three professionals and a
-              handful of trainees, we are today 10,000 strong and counting.
+              Stitchers Garments Manufacturing and Home Furnishing Association
+              trains young girls and women on modern machines - from cutting to
+              stitching to finishing to packing, even managing our showrooms.
+              From a small group of three professionals, we are today 10,000
+              strong and counting.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
@@ -91,19 +79,19 @@ const AboutSection = () => {
 
               {/* Signature */}
               <div className="flex items-center gap-3 sm:gap-4">
-                <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full overflow-hidden border-2 border-[#d1a375]">
+                <div className="h-10 w-10 sm:h-16 sm:w-16 rounded-full overflow-hidden border-2 border-[#d1a375]">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                    src={swati}
                     alt="Founder"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
                   <p className="font-medium text-gray-800 text-sm sm:text-base">
-                    The Stitching Waves Team
+                    The Stitchers Garments Team
                   </p>
                   <p className="text-xs sm:text-sm text-[#d1a375]">
-                    Creating Opportunities Since 2025
+                    Creating Opportunities Since 2019
                   </p>
                 </div>
               </div>
@@ -120,8 +108,8 @@ const AboutSection = () => {
           viewport={{ once: true }}
         >
           <img
-            src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-            alt="Stitching Waves products"
+            src={abouthome3}
+            alt="Stitchers Garments products"
             className="w-full h-full object-cover"
           />
         </motion.div>
@@ -139,7 +127,7 @@ const AboutSection = () => {
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
-              title="Stitching Waves Story"
+              title="Stitchers Garments Story"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

@@ -42,14 +42,14 @@ const Navbar = () => {
     <header className="relative z-50">
       {/* Top Contact Bar */}
       <div className="bg-[#436f6e] text-[#e0dbdb] text-sm px-4 fixed top-0 left-0 w-full z-[100]">
-        <div className="container mx-auto flex justify-between items-center py-2">
-          <div className="flex items-center space-x-4">
+        <div className="container mx-auto flex justify-center md:justify-between items-center py-2">
+          <div className="flex flex-col  items-center space-x-4">
             <a
-              href="mailto:info@stitchingwaves.com"
+              href="mailto:info@stitchersgarmentsandhomefurnishing.com"
               className="hover:text-[#d1a375] text-xs md:text-sm transition-colors flex items-center"
             >
               <Mail size={14} className="mr-1" />
-              info@stitchingwaves.com
+              info@stitchersgarmentsandhomefurnishing.com
             </a>
             <a
               href="tel:+918788493783"
@@ -69,7 +69,7 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav
         className={`fixed w-full pt-6 left-0 transition-all duration-300 z-[90] ${
-          scrolled ? "bg-white shadow-md" : "bg-white/90 backdrop-blur-sm"
+          scrolled ? "bg-white shadow-md" : "bg-white shadow-md"
         }`}
         style={{ top: scrolled ? "0" : "30px" }}
       >
@@ -157,11 +157,13 @@ const Navbar = () => {
             <h3 className="font-semibold text-gray-900 mb-3">Contact Us</h3>
             <div className="space-y-3">
               <a
-                href="mailto:info@stitchingwaves.com"
+                href="mailto:info@stitchersgarmentsandhomefurnishing.com"
                 className="text-gray-700 hover:text-[#436f6e] flex items-center"
               >
                 <Mail size={16} className="mr-2" />
-                info@stitchingwaves.com
+                info@stitchersgarments
+                <br />
+                andhomefurnishing.com
               </a>
               <a
                 href="tel:+918788493783"

@@ -5,6 +5,8 @@ import WhatWeDoSection from "./WhatWeDoSection";
 import ProductsSection from "./ProductsSection";
 import ImpactSection from "./ImpactSection";
 import FacilitiesSection from "./FacilitiesSection";
+import VisionMissionGallery from "./VisionMissionGallery";
+import GalleryGrid from "./GalleryGrid";
 
 function Home() {
   return (
@@ -15,6 +17,8 @@ function Home() {
       <ProductsSection />
       <ImpactSection />
       <FacilitiesSection />
+      <VisionMissionGallery />
+      <GalleryGrid />{" "}
     </div>
   );
 }

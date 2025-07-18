@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import GalleryGrid from "../Home/GalleryGrid";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -54,7 +55,7 @@ function FacilitiesPage() {
   ];
 
   return (
-    <div className="mt-32 bg-[#e7e7e7] ">
+    <div className="mt-50 bg-[#e7e7e7] ">
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
         {/* Hero Section */}
         <motion.div
@@ -133,36 +134,7 @@ function FacilitiesPage() {
           </motion.div>
         </motion.div>
 
-        {/* Gallery Preview */}
-        <motion.div variants={fadeIn} className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-[#436f6e]">
-            Facility Gallery
-          </h2>
-          <div className="flex justify-center">
-            <div className="w-16 h-1 rounded-full bg-[#d1a375]"></div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20"
-        >
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <motion.div
-              key={item}
-              variants={fadeIn}
-              className="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300"
-            >
-              <img
-                src={`https://source.unsplash.com/random/600x400?garment,factory,${item}`}
-                alt="Facility"
-                className="w-full h-48 object-cover"
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+        <GalleryGrid />
       </div>
     </div>
   );

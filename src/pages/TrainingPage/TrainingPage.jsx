@@ -57,7 +57,7 @@ function TrainingPage() {
   ];
 
   return (
-    <div className="training-page bg-[#e7e7e7] mt-32 ">
+    <div className="training-page bg-[#e7e7e7] mt-50 ">
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
         {/* Hero Section */}
         <motion.div
